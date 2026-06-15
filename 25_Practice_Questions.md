@@ -411,7 +411,7 @@ D. The deferred execution pipeline filter.
 
 ### 3. Correct Answer: A
 * **Why A is correct:** An initial state $|0>$ rotated by an $RY(\pi/3)$ gate yields $\cos(\pi/6)|0> + \sin(\pi/6)|1> = {\sqrt{3}}/{2}|0> + {1}/{2}|1>$.
-* The subsequent $RZ(\pi/2)$ gate only applies a relative phase shift to the state amplitude ($e^{-i\pi/4}$ and $e^{i\pi/4}$ factors) but preserves the absolute probability magnitude. The measurement probability for observing state $|1>$ is exactly $|rac{1}{2}|^2 = 0.25$.
+* The subsequent $RZ(\pi/2)$ gate only applies a relative phase shift to the state amplitude ($e^{-i\pi/4}$ and $e^{i\pi/4}$ factors) but preserves the absolute probability magnitude. The measurement probability for observing state $|1>$ is exactly $|{1}/{2}|^2 = 0.25$.
 * **Why B, C, and D are incorrect:** Option B ($0.75$) represents the probability of measuring state $|0>$. Option C ($0.5$) would occur if an $H$ or $RY(\pi/2)$ gate drove the state completely onto the sphere's equator, which does not match a $\pi/3$ rotation. Option D is a mathematical miscalculation.
 
 ### 4. Correct Answer: B
