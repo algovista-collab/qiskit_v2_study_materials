@@ -54,7 +54,7 @@ D. `SparsePauliOp(['IIXYZI'], coeffs=[2.+0.j])`
 
 ---
 
-### 3. Given the code block below, what is the exact analytical probability of observing the state $|1angle$ upon running an ideal computational basis measurement?
+### 3. Given the code block below, what is the exact analytical probability of observing the state $|1>$ upon running an ideal computational basis measurement?
 
 ```python
 from qiskit import QuantumCircuit
@@ -78,8 +78,11 @@ D. 0.125
 ### 4. Which visualization method should be chosen to visualize a multi-qubit quantum state specifically when you need to highlight continuous phase values by color mapping across computational basis state projections without displaying a full density matrix?
 
 A. `plot_state_city`
+
 B. `plot_state_qsphere`
+
 C. `plot_state_hinton`
+
 D. `plot_bloch_multivector`
 
 ---
@@ -95,8 +98,11 @@ plot_bloch_multivector(sv)
 ```
 
 A. Qubit 0 vector points along $+Y$; Qubit 1 vector points along $-Z$
+
 B. Qubit 0 vector points along $-X$; Qubit 1 vector points along $+Y$
+
 C. Qubit 0 vector points along $+X$; Qubit 1 vector points along $-Y$
+
 D. Qubit 0 vector points along $-Z$; Qubit 1 vector points along $+X$
 
 ---
@@ -104,8 +110,11 @@ D. Qubit 0 vector points along $-Z$; Qubit 1 vector points along $+X$
 ### 6. You want to dynamically append measurements to all qubits in your circuit. You have already declared a classical register and want the measurement outcomes to route directly into it without creating an additional, new classical register. Which routine fits this requirement precisely?
 
 A. `qc.measure_all()`
+
 B. `qc.measure_all(add_bits=False)`
+
 C. `qc.measure_active()`
+
 D. `qc.measure()`
 
 ---
@@ -113,8 +122,11 @@ D. `qc.measure()`
 ### 7. When configuring a compilation strategy utilizing the modern pass management framework via `generate_preset_pass_manager`, which parameter option dictates the depth and heuristic computational effort spent optimizing target hardware layouts?
 
 A. `optimization_level`
+
 B. `routing_method`
+
 C. `initial_layout`
+
 D. `approximation_degree`
 
 ---
@@ -122,8 +134,11 @@ D. `approximation_degree`
 ### 8. A user compiles a circuit for an IBM backend using `optimization_level=3`. What structural optimization will they notice regarding consecutive single-qubit gates?
 
 A. All virtual Z gates are transformed into physical RZ microwave pulses.
+
 B. Adjacent single-qubit gates are aggressively combined and parameterized into single target basis gates to minimize errors.
+
 C. The transpiler wraps all operations into un-optimized opaque black-box structures.
+
 D. Every CX gate is systematically replaced with an ECR gate regardless of backend specifications.
 
 ---
@@ -185,8 +200,11 @@ sampler = SamplerV2(mode="Batch")
 ### 11. What occurs when the `.close()` method is called on an active Qiskit Runtime `Session` or `Batch` object instance?
 
 A. The session immediately stops accepting new jobs, and all currently queued or running jobs within that context are forced to cancel.
+
 B. The session stops accepting new job submissions, but any jobs already submitted within the context are allowed to run to completion.
+
 C. The session remains open indefinitely until the maximum system wall clock limit forces a hard server-side termination.
+
 D. The session context is deleted along with its entire historical job record from the cloud dashboard service database.
 
 ---
@@ -194,8 +212,11 @@ D. The session context is deleted along with its entire historical job record fr
 ### 12. How does usage time accumulation differ between Batch mode and Session mode on real IBM Quantum backends?
 
 A. Batch mode limits your usage footprint to active QPU processing time, whereas Session mode tracks the total wall clock time from context opening to closure (including processing pauses).
+
 B. Session mode calculates usage based only on pure gate counts, while Batch mode uses real hardware clock duration metrics.
+
 C. There is no difference; both execution modes charge exclusively for full wall clock time from start to finish.
+
 D. Batch mode charges for the compilation time of circuits, whereas Session mode does not.
 
 ---
@@ -203,8 +224,11 @@ D. Batch mode charges for the compilation time of circuits, whereas Session mode
 ### 13. Which represents the standard structural layout sequence for executing an experimental workflow with the V2 Estimator primitive?
 
 A. Circuit design -> Primitive instantiation -> Hardware selection -> Execution
+
 B. Backend selection -> Circuit design -> Observable mapping -> Transpilation -> Layout application to observables -> Primitive configuration -> Execution
+
 C. Primitive configuration -> Execution -> Local compilation -> Topology selection
+
 D. Observable mapping -> Execution -> Local transpilation -> Backend selection
 
 ---
@@ -240,8 +264,11 @@ job = sampler.run([pub])
 ### 15. When defining an execution block for `EstimatorV2.run()`, what is the correct structure for a single Primitive Unified Block (PUB) tuple?
 
 A. `(circuit, observables)`
+
 B. `(circuit, observables, parameter_values, precision)`
+
 C. `(circuit, observables, shots)`
+
 D. `(circuit, parameter_values)`
 
 ---
@@ -249,8 +276,11 @@ D. `(circuit, parameter_values)`
 ### 16. According to the broadcasting rules used by Qiskit Runtime Primitive Unified Blocks (PUBs), what happens if a circuit uses a parameter array of size 5 and an observable array of size 1?
 
 A. The execution fails immediately due to a dimension mismatch error.
+
 B. The single observable is automatically broadcast to match all 5 parameter sets, resulting in 5 expectation values.
+
 C. The execution defaults to a size of 1, discarding the remaining parameter values.
+
 D. The system pads the missing observable slots with identity operators.
 
 ---
@@ -258,12 +288,15 @@ D. The system pads the missing observable slots with identity operators.
 ### 17. You execute a parameterized circuit via SamplerV2 with an array of 4 parameter sets. Assuming your classical register is named 'c', how should you retrieve the measurement counts for the third parameter configuration from the job result object?
 
 A. `result.get_counts(2)`
+
 B. `result[0].data.meas.get_counts()[2]`
+
 C. 
 ```python
 pub_result = result[0]
 pub_result.data.c.get_counts(2)
 ```
+
 D. `result.pub_data[2].counts()`
 
 ---
@@ -271,8 +304,11 @@ D. `result.pub_data[2].counts()`
 ### 18. Which code snippet correctly retrieves a historical list of jobs submitted to an IBM backend named 'ibm_brisbane' under a specific session ID?
 
 A. `service.jobs(backend_name='ibm_brisbane', session_id=my_session_id)`
+
 B. `backend.jobs(session_id=my_session_id)`
+
 C. `Session.from_id(my_session_id).get_all_jobs()`
+
 D. `service.get_backend('ibm_brisbane').history(my_session_id)`
 
 ---
@@ -280,8 +316,11 @@ D. `service.get_backend('ibm_brisbane').history(my_session_id)`
 ### 19. Which line of OpenQASM 3 code correctly declares a fixed-size array of 8 multi-bit registers, where each register is a 4-bit unsigned integer?
 
 A. `uint[4][8] my_array;`
+
 B. `array[uint[4], 8] my_array;`
+
 C. `uint my_array[4][8];`
+
 D. `register uint[4] my_array[8];`
 
 ---
@@ -289,8 +328,11 @@ D. `register uint[4] my_array[8];`
 ### 20. When interacting directly with the IBM Quantum cloud infrastructure via its REST API, which header field must be included to authenticate your requests securely?
 
 A. `Authorization: Bearer <API_TOKEN>`
+
 B. `X-IAM-Key: <KEY>`
+
 C. `Content-Type: application/qasm`
+
 D. `Service-CRN: <CRN_ID>`
 
 ---
@@ -298,8 +340,11 @@ D. `Service-CRN: <CRN_ID>`
 ### 21. What is the native gate configuration behavior when transpiling a circuit for a target backend that natively supports Cross-Resonance (`ECR`) instead of Controlled-NOT (`CX`)?
 
 A. The transpiler will reject the circuit unless you manually replace all CX gates first.
+
 B. Each CX gate is unrolled into an ECR gate combined with local single-qubit rotations.
+
 C. The transpiler converts all operations into software-simulated swap networks.
+
 D. The circuit is executed on the hardware using virtualized CX emulation layers.
 
 ---
@@ -307,15 +352,21 @@ D. The circuit is executed on the hardware using virtualized CX emulation layers
 ### 22. Which function provides a straightforward way to dynamically track and print updates on a job's status while it is processing in the IBM Quantum hardware runtime queue?
 
 A. `job.status()`
+
 B. `job.wait_for_final_state()`
+
 C. `job.result(stream=True)`
+
 D. `runtime.monitor(job)`
 
 ---('23. What happens if you attempt to submit an untranspiled `QuantumCircuit` directly to an IBM Qiskit Runtime V2 primitive execution method?
 
 A. The primitive automatically transpiles the circuit using default optimization settings.
+
 B. The job fails because V2 primitives require circuits to be pre-transpiled to match the backend's native basis gates and physical layout.
+
 C. The primitive routes the circuit to a local simulator instead of the real hardware.
+
 D. The circuit runs normally, but the hardware uses slower fallback emulation pulses.
 
 ---
@@ -323,8 +374,11 @@ D. The circuit runs normally, but the hardware uses slower fallback emulation pu
 ### 24. When using `generate_preset_pass_manager` to target a specific backend, what is the primary benefit of passing the real `backend` object instance instead of just providing a raw list of basis gates?
 
 A. It enables the pass manager to optimize the circuit using real-time dynamic calibration metrics, gate error rates, and the physical coupling map of the device.
+
 B. It automatically authenticates your runtime cloud session with the cloud infrastructure service.
+
 C. It bypasses local compilation and uploads the raw Python code directly to the hardware.
+
 D. It reduces the physical gate execution times on the quantum device.
 
 ---
@@ -332,8 +386,11 @@ D. It reduces the physical gate execution times on the quantum device.
 ### 25. Which OpenQASM 3 feature allows you to change the execution path of a circuit dynamically based on the outcome of a mid-circuit measurement?
 
 A. Dynamic circuit switch-case or conditional if statements evaluating classical bits.
+
 B. The compiletime verification macro system.
+
 C. The reset instruction.
+
 D. The deferred execution pipeline filter.
 
 ---
