@@ -359,7 +359,9 @@ C. `job.result(stream=True)`
 
 D. `runtime.monitor(job)`
 
----('23. What happens if you attempt to submit an untranspiled `QuantumCircuit` directly to an IBM Qiskit Runtime V2 primitive execution method?
+---
+
+### 23. What happens if you attempt to submit an untranspiled `QuantumCircuit` directly to an IBM Qiskit Runtime V2 primitive execution method?
 
 A. The primitive automatically transpiles the circuit using default optimization settings.
 
