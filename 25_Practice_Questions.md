@@ -1,6 +1,6 @@
 # Qiskit v2.x Certification Practice Exam
 
-This practice exam contains 25 high-fidelity, advanced multiple-choice questions designed to align precisely with Qiskit v2.x syntax, the IBM Quantum Runtime V2 primitive architecture, and OpenQASM 3 specifications. 
+This practice exam contains 25 multiple-choice questions designed to align precisely with Qiskit v2.x syntax, the IBM Quantum Runtime V2 primitive architecture, and OpenQASM 3 specifications. 
 
 ---
 
