@@ -1,4 +1,4 @@
-# Qiskit v2.x Advanced Practice Certification Exam
+# Qiskit v2.x Certification Practice Exam
 
 This practice exam contains 25 high-fidelity, advanced multiple-choice questions designed to align precisely with Qiskit v2.x syntax, the IBM Quantum Runtime V2 primitive architecture, and OpenQASM 3 specifications. 
 
@@ -51,7 +51,8 @@ D. `SparsePauliOp(['IIXYZI'], coeffs=[2.+0.j])`
 
 ---
 
-### 3. Given the code block below, what is the exact analytical probability of observing the state $|1angle$ upon running an ideal computational basis measurement?
+### 3. Given the code block below, what is the exact analytical probability of observing the state $|1
+angle$ upon running an ideal computational basis measurement?
 
 ```python
 from qiskit import QuantumCircuit
@@ -345,8 +346,15 @@ D. The deferred execution pipeline filter.
 * **Why A, C, and D are incorrect:** These variations result from reversing the little-endian string hierarchy (big-endian interpretations) or miscalculating continuous slicing boundaries instead of explicit individual register index mappings.
 
 ### 3. Correct Answer: A
-* **Why A is correct:** An initial state $|0angle$ rotated by an $RY(\pi/3)$ gate yields $\cos(\pi/6)|0angle + \sin(\pi/6)|1angle = rac{\sqrt{3}}{2}|0angle + rac{1}{2}|1angle$. The subsequent $RZ(\pi/2)$ gate only applies a relative phase shift to the state amplitude ($e^{-i\pi/4}$ and $e^{i\pi/4}$ factors) but preserves the absolute probability magnitude. The measurement probability for observing state $|1angle$ is exactly $|rac{1}{2}|^2 = 0.25$.
-* **Why B, C, and D are incorrect:** Option B ($0.75$) represents the probability of measuring state $|0angle$. Option C ($0.5$) would occur if an $H$ or $RY(\pi/2)$ gate drove the state completely onto the sphere's equator, which does not match a $\pi/3$ rotation. Option D is a mathematical miscalculation.
+* **Why A is correct:** An initial state $|0
+angle$ rotated by an $RY(\pi/3)$ gate yields $\cos(\pi/6)|0
+angle + \sin(\pi/6)|1
+angle = rac{\sqrt{3}}{2}|0
+angle + rac{1}{2}|1
+angle$. The subsequent $RZ(\pi/2)$ gate only applies a relative phase shift to the state amplitude ($e^{-i\pi/4}$ and $e^{i\pi/4}$ factors) but preserves the absolute probability magnitude. The measurement probability for observing state $|1
+angle$ is exactly $|rac{1}{2}|^2 = 0.25$.
+* **Why B, C, and D are incorrect:** Option B ($0.75$) represents the probability of measuring state $|0
+angle$. Option C ($0.5$) would occur if an $H$ or $RY(\pi/2)$ gate drove the state completely onto the sphere's equator, which does not match a $\pi/3$ rotation. Option D is a mathematical miscalculation.
 
 ### 4. Correct Answer: B
 * **Why B is correct:** `plot_state_qsphere` is explicitly customized to display a multi-qubit global state vector as nodes distributed across a sphere, where the size of each node denotes its probability amplitude and its color dynamically maps to its continuous phase angle.
