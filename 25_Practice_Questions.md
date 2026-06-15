@@ -45,8 +45,11 @@ SparsePauliOp.from_sparse_list([("XYZ", (1, 3, 4), 2.0)], num_qubits=6)
 ```
 
 A. `SparsePauliOp(['ZXIYII'], coeffs=[2.+0.j])`
+
 B. `SparsePauliOp(['IZYIXI'], coeffs=[2.+0.j])`
+
 C. `SparsePauliOp(['IXIYZE'], coeffs=[2.+0.j])`
+
 D. `SparsePauliOp(['IIXYZI'], coeffs=[2.+0.j])`
 
 ---
@@ -64,8 +67,11 @@ qc.rz(np.pi / 2, 0)
 ```
 
 A. 0.25
+
 B. 0.75
+
 C. 0.5
+
 D. 0.125
 
 ---
