@@ -54,8 +54,7 @@ D. `SparsePauliOp(['IIXYZI'], coeffs=[2.+0.j])`
 
 ---
 
-### 3. Given the code block below, what is the exact analytical probability of observing the state $|1
-angle$ upon running an ideal computational basis measurement?
+### 3. Given the code block below, what is the exact analytical probability of observing the state $|1angle$ upon running an ideal computational basis measurement?
 
 ```python
 from qiskit import QuantumCircuit
